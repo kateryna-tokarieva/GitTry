@@ -10,19 +10,10 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var appsSign: UILabel!
-    
-    
-    
     @IBOutlet weak var rock: UIButton!
-    
     @IBOutlet weak var paper: UIButton!
-    
-    
     @IBOutlet weak var sciccors: UIButton!
-    
-    
     @IBOutlet weak var state: UILabel!
-    
     @IBOutlet weak var play: UIButton!
     
     var win = 0
@@ -34,6 +25,7 @@ class ViewController: UIViewController {
         play.isHidden = true
         self.view.backgroundColor = UIColor(red: 1, green: 0.71372, blue: 0.756862, alpha: 1)
     }
+    
     func play (_ sign: Sign) {
        let computerSign = randomSigh()
         appsSign.text = computerSign.description
@@ -87,16 +79,13 @@ class ViewController: UIViewController {
         appsSign.text = "🤖"
     }
     
-    
     @IBAction func rock(_ sender: Any) {
         play(.rock)
     }
     
-    
     @IBAction func paper(_ sender: Any) {
         play(.paper)
     }
-    
     
     @IBAction func scissors(_ sender: Any) {
         play(.scissors)
@@ -107,16 +96,11 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet weak var winLabel: UILabel!
-    
     @IBOutlet weak var loseLabel: UILabel!
-    
     @IBOutlet weak var drawLabel: UILabel!
-    
     @IBOutlet weak var drawCount: UILabel!
-    
     @IBOutlet weak var winCount: UILabel!
     @IBOutlet weak var loseCount: UILabel!
-    
     
     @IBAction func resetCountButton(_ sender: Any) {
         resetCount()
